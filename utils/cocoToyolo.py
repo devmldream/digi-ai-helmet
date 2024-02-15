@@ -31,9 +31,10 @@ def convert_coco_to_yolo(coco_xml_dir, yolo_txt_dir, class_mapping):
 
                         file.write(f"{class_id} {x_center:.6f} {y_center:.6f} {width:.6f} {height:.6f}\n")
 
+
 if __name__ == "__main__":
-    coco_xml_dir = '/home/findev/dev/project/MIke/new_detector/workspace/Annotations/train'
-    yolo_txt_dir = '/home/findev/dev/project/yolov7/data/train/labels'
+    coco_xml_dir = '//home/programmer/digi/digi_ai_child/dataset/workspace/Annotations/train'
+    yolo_txt_dir = '//home/programmer/digi/digi-ai-helmet/data/train/labels'
     class_mapping = {"helmet": 0, "head_with_helmet": 1, "head": 2, "person_with_helmet": 3, "face": 4,
                      "person_no_helmet": 5}
     convert_coco_to_yolo(coco_xml_dir, yolo_txt_dir, class_mapping)
